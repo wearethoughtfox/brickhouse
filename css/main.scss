@@ -2,5 +2,5 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
-
+@import '_variables.scss';
 @import '_tachyons/_tachyons.scss';
