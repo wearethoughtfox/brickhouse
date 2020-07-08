@@ -1,5 +1,11 @@
 // Converted Variables
 
+$body-color: #515151;
+$body-bg: #fff;
+$primary-color: #FFC843;
+$secondary-color: #6C6C6C;
+$grey-color: #393939;
+
 $sans-serif: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif !default;
 $serif: georgia, serif !default;
 $code: consolas, monaco, monospace !default;
@@ -105,29 +111,74 @@ $white-025: rgba(255,255,255,.025) !default;
 $white-0125: rgba(255,255,255,.0125) !default;
 
 $gold-000: #201908;
-    $gold-100: #372b0e;
-    $gold-200: #4f3e15;
-    $gold-300: #69521c;
-    $gold-400: #846823;
-    $gold-500: #a07e2a;
-    $gold-600: #bd9432;
-    $gold-700: #dbac3a;
-    $gold-800: #f9c442;
-    $gold-900: #ffe1ae;
+$gold-100: #372b0e;
+$gold-200: #4f3e15;
+$gold-300: #69521c;
+$gold-400: #846823;
+$gold-500: #a07e2a;
+$gold-600: #bd9432;
+$gold-700: #dbac3a;
+$gold-800: #f9c442;
+$gold-900: #ffe1ae;
 
-    $gray-000: #1a1a1a;
-    $gray-100: #2c2c2c;
-    $gray-200: #404040;
-    $gray-300: #565656;
-    $gray-400: #6c6c6c;
-    $gray-500: #828282;
-    $gray-600: #9a9a9a;
-    $gray-700: #b2b2b2;
-    $gray-800: #cbcbcb;
-    $gray-900: #e5e5e5;
+$gray-000: #1a1a1a;
+$gray-100: #2c2c2c;
+$gray-200: #404040;
+$gray-300: #565656;
+$gray-400: #6c6c6c;
+$gray-500: #828282;
+$gray-600: #9a9a9a;
+$gray-700: #b2b2b2;
+$gray-800: #cbcbcb;
+$gray-900: #e5e5e5;
 
 // Custom Media Query Variables
 
 $breakpoint-not-small: 'screen and (min-width: 30em)' !default;
 $breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)' !default;
 $breakpoint-large: 'screen and (min-width: 60em)' !default;
+
+//font-family
+body {
+    font-family: $sans-serif;
+  }
+  
+  h1,.h1,
+  h2,.h2,
+  h3,
+  .h3,
+  h4,
+  .h4 {
+    font-family: $serif;
+  }
+  
+  p {
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+  }
+  
+
+//_border-colors
+.b--primary { border-color: $primary-color }
+.b--secondary { border-color: $secondary-color; }
+.b--customgrey { border-color: $grey-color; }
+
+.b--primary:after { border-color: $primary-color }
+.b--secondary:after { border-color: $secondary-color; }
+.b--customgrey:after { border-color: $grey-color; }
+
+//_skins
+.primary { color: $primary-color }
+.secondary { color: $secondary-color; }
+.customgrey { color: $grey-color; }
+
+//also using .light-silver
+
+.bg-primary { background-color: $primary-color }
+.bg-secondary { background-color: $secondary-color; }
+.bg-customgrey { background-color: $grey-color; }
+
+//skins-pseudo
+
+.hover-primary:hover { color: $primary-color; }
+.hover-primary:focus { color: $primary-color; }
