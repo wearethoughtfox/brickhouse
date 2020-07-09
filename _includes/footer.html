@@ -1,6 +1,11 @@
 <footer class="bg-black pv5 pv6-l cf" id="fadein-backtotop">
 
-  <form class="pa4 black-80">
+  <form class="pa4 black-80" submission="Hurray! A Brick House contact form message" name="contact" method="POST"
+    data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+
+    <p class="hidden">
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
     <div>
       <label for="name" class="f4 b db mb2 white">Name</label>
       <input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">
@@ -12,6 +17,17 @@
       <input id="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email" aria-describedby="email-desc">
       <small id="email-desc" class="f5 white-60 db mb2 white">Helper text for the form control.</small>
     </div>
+
+    <div>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+    </div>
+
+    <div data-netlify-recaptcha="true"></div>
+
+    <button type="submit">Send</button>
+
   </form>
 
   <a href="#top" class="back-to-top fixed bottom-1 right-1 bg-white lh-solid" data-aos="fade-left"
