@@ -1,6 +1,6 @@
 <header class="db dt-l w-100 border-box pa3 ph5-l" id="top">
   <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="{{ site.baseurl }}/" title="Home">
-    <img class="h2" src="{{ site.baseurl }}/images/logo.svg" alt="{{ site.title }}">
+    <img class="h2" src="{{ site.baseurl }}/images/logo.png" alt="{{ site.title }}">
   </a>
 
   <nav class="db dtc-l v-mid w-100 w-75-l tc tr-l">
@@ -10,7 +10,7 @@
     {% if page.url contains link.url %}
     {% assign current = 'current b--primary' %}
     {% endif %}
-    <a class="no-underline f6 f5-l dib mr3 mr4-l ttu {{ current }}" href="{{ link.url }}"
+    <a class="secondary no-underline f6 f5-l dib mr3 mr4-l ttu {{ current }}" href="{{ link.url }}"
       title="{{ link.title }}">{{ link.title }}</a>
     {% endfor %}
   </nav>
