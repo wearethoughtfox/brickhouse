@@ -182,3 +182,62 @@ body {
 
 .hover-primary:hover { color: $primary-color; }
 .hover-primary:focus { color: $primary-color; }
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+.hidden { 
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+button {
+  line-height: 1;
+  background-color: $primary-color;
+  box-shadow: 0 2px 0 $secondary-color;
+  border: 2px solid transparent;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  border-radius: 0;
+  width: 100%;
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding: 8px 10px 7px;
+    font-size: $font-size-4;
+}
+
+.custom-textarea {
+  font-size: 1rem;
+line-height: 1.25;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+display: block;
+width: 100%;
+min-height: 40px;
+margin-bottom: 20px;
+padding: 5px;
+resize: vertical;
+border: 2px solid $grey-color;
+border-radius: 0;
+-webkit-appearance: none;
+}
+

@@ -1,9 +1,8 @@
 ---
-
 layout: default
 ---
 
-<section class="flex-ns vh-75 items-center mb4">
+<section class="flex-ns vh-75 vh-100-l items-center mb5">
     <div class="mw7 pr5-l">
         <img src="{{ site.baseurl }}/images/cpaper-square.jpg">
     </div>
@@ -17,7 +16,7 @@ layout: default
     </div>
 </section>
 
-<section class="bg-secondary pv6 ph4 ph5-l overflow-hidden" id="service">
+<section class="bg-secondary pv5 ph4 ph5-l overflow-hidden" id="about">
     <h2 class="sans-serif f6 ttu tracked white">Nice subhead</h2>
     <h1 class="f2 f1-l white fw2">A something studio for all your needs. </h1>
     <p class="sans-serif f3 lh-copy measure white fw1 pb5 pb6-l">Located on the border between Hampshire and Wiltshire,
@@ -29,50 +28,29 @@ layout: default
         work closely with clients to protect, restore and care for artworks in accordance with professional and ethical
         standards.</p>
 
-    <article class="fl w-100 w-33-l pa3-ns" data-aos="fade-up">
-        <a href="{{ work.url }}">
-            <span class="sr-only">{{ work.title }}</span>
-            <div class="aspect-ratio aspect-ratio--6x4">
-                <img style="background-image:url({{ site.baseurl }}/images/a-cleaning-6-4.jpg);"
-                    class="db bg-center cover aspect-ratio--object dim" />
-            </div>
-        </a>
-        <a href="{{ work.url }}" class="pb2 link db dim primary">
-            <h3 class="sans-serif f4 mb0 fw4 ttu tracked">Paintings conservation</h3>
-        </a>
-        <p class="mid-gray pb3">{{work.excerpt}}</p>
-    </article>
-
-    <article class="fl w-100 w-33-l pa3-ns" data-aos="fade-up">
-        <a href="{{ work.url }}">
-            <span class="sr-only">{{ work.title }}</span>
-            <div class="aspect-ratio aspect-ratio--6x4">
-                <img style="background-image:url({{ site.baseurl }}/images/qwork-in-situ-6-4.JPG);"
-                    class="db bg-center cover aspect-ratio--object dim" />
-            </div>
-        </a>
-        <a href="{{ work.url }}" class="pb2 link db dim">
-            <h3 class="f5 mb0 fw4 ttu tracked">Collections management</h3>
-        </a>
-        <p class="mid-gray pb3">{{work.excerpt}}</p>
-    </article>
-
-    <article class="fl w-100 w-33-l pa3-ns" data-aos="fade-up">
-        <a href="{{ work.url }}">
-            <span class="sr-only">{{ work.title }}</span>
-            <div class="aspect-ratio aspect-ratio--6x4">
-                <img style="background-image:url({{ site.baseurl }}/images/2-frames-6-4.JPG);"
-                    class="db bg-center cover aspect-ratio--object dim" />
-            </div>
-        </a>
-        <a href="{{ work.url }}" class="pb2 link db dim">
-            <h3 class="f5 mb0 fw4 ttu tracked">Mounting and framing</h3>
-        </a>
-        <p class="mid-gray pb3">{{work.excerpt}}</p>
-    </article>
 </section>
 
-<section class="cf ph3 pv6 pa4-m pa5-l mw9 center bg-primary" id="work">
+<section class="bg-secondary pv5 ph4 ph5-l overflow-hidden" id="service">
+    {% for service in site.services %}
+
+    <article class="fl w-100 w-33-l pa3-ns pb4" data-aos="fade-up">
+        <a href="{{ service.url }}">
+            <span class="hidden">{{ service.title }}</span>
+            <div class="aspect-ratio aspect-ratio--6x4">
+                <img style="background-image:url({{ site.baseurl }}/images/{{ service.image }});"
+                    class="db bg-center cover aspect-ratio--object dim" />
+            </div>
+        </a>
+        <a href="{{ service.url }}" class="pb2 link db dim primary">
+            <h3 class="sans-serif f4 mb0 fw4 ttu tracked">{{ service.title }}</h3>
+        </a>
+        <p class="white pb3 fw1 lh-copy">{{ service.excerpt }}</p>
+    </article>
+    {% endfor %}
+
+</section>
+
+<section class="cf ph4 pv6 pa4-m pa5-l mw9 center bg-primary" id="work">
     <div class="fr w-100 w-80-l">
         <h2 class="sans-serif f6 ttu tracked">Our work</h2>
         <h1 class="f2 f1-l lh-title mt0 mb4 mb5-ns fw1">
@@ -81,28 +59,28 @@ layout: default
     </div>
     <div class="f6 lh-copy fl w-100 mb4">
         <div class="fl-ns w-100 w-20-l pr3-m pr5-l">
-            <p>
-                Jahrbuch <small class="fw6">1968/69</small>
+            <p class="f4">
+                Palace of Westminster</small>
             </p>
         </div>
         <div class="fl-ns w-50-m w-20-l pr3-m pr5-l">
-            <p>
-                Institut suisse pour l'étude de l'art
+            <p class="f4">
+                Russell Cotes Museum & Art Gallery
             </p>
         </div>
         <div class="fl-ns w-50-m w-20-l pr3-m pr5-l">
-            <p>
-                Schweizerisches<br class="dn db-l"> Institut für Kunstwissenschaft
+            <p class="f4">
+                Watts Gallery
             </p>
         </div>
         <div class="fl-ns w-50-m w-20-l pr3-m pr5-l">
-            <p>
-                Istituto svizzero di studi d'arte
+            <p class="f4">
+                Another amazing client
             </p>
         </div>
         <div class="fl-ns w-50-m w-20-l pr3-m pr5-l">
-            <p>
-                Swiss Institute for Art Research
+            <p class="f4">
+                Another amazing client
             </p>
         </div>
     </div>

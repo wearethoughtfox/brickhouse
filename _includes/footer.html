@@ -1,38 +1,42 @@
 <footer class="bg-black pv5 pv6-l cf" id="fadein-backtotop">
 
-  <form class="pa4 black-80" submission="Hurray! A Brick House contact form message" name="contact" method="POST"
-    data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+  <div class="fl w-100 w-50-ns">
+    <h2 class="white f2 f1-l lh-title mt0 mb2 mb5-ns fw1 pl4">Get in
+      touch</h2>
+  </div>
+  <div class="fl w-100 w-50-ns">
+    <form class="pa4 black-80" submission="Hurray! A Brick House contact form message" name="contact" method="POST"
+      data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
 
-    <p class="hidden">
-      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-    </p>
-    <div>
-      <label for="name" class="f4 b db mb2 white">Name</label>
-      <input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">
-      <small id="name-desc" class="f5 white-60 db mb2 white">Helper text for the form control.</small>
-    </div>
-
-    <div>
-      <label for="email" class="f4 b db mb2 white">Email</label>
-      <input id="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email" aria-describedby="email-desc">
-      <small id="email-desc" class="f5 white-60 db mb2 white">Helper text for the form control.</small>
-    </div>
-
-    <div>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
       </p>
-    </div>
+      <div>
+        <label for="name" class="f4 b db mb2 white">Name</label>
+        <input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">
+      </div>
 
-    <div data-netlify-recaptcha="true"></div>
+      <div>
+        <label for="email" class="f4 b db mb2 white">Email</label>
+        <input id="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email"
+          aria-describedby="email-desc">
+      </div>
 
-    <button type="submit">Send</button>
+      <div>
+        <label for="comment" class="f4 b db mb2 white">Message</label>
+        <textarea rows="5" id="comment" name="comment" class="input-reset custom-textarea"
+          aria-describedby="comment-desc"></textarea>
+      </div>
 
-  </form>
+      <div data-netlify-recaptcha="true"></div>
 
-  <a href="#top" class="back-to-top fixed bottom-1 right-1 bg-white lh-solid" data-aos="fade-left"
-    data-aos-anchor="#fadein-backtotop">
-    <img src="{{ site.baseurl }}/images/arrow.svg" class="di w2 w3-l" alt="Scroll to top button">
-  </a>
+      <button type="submit">Send</button>
 
+    </form>
+
+    <a href="#top" class="back-to-top fixed bottom-1 right-1 bg-white lh-solid z-999" data-aos="fade-left"
+      data-aos-anchor="#fadein-backtotop">
+      <img src="{{ site.baseurl }}/images/arrow.svg" class="di w2 w3-l" alt="Scroll to top button">
+    </a>
+  </div>
 </footer>
