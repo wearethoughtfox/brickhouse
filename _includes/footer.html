@@ -3,22 +3,22 @@
   <div class="fr w-100 w-80-l pt2-l pl4-l">
     <h2 class="white f2 f1-l lh-title mt0 mb2 fw1">Get in
       touch</h2>
-    <form class="black-80 pl2-l" submission="Hurray! A Brick House contact form message" name="contact" method="POST"
-      data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+    <form class="black-80 pl2-l" method="POST" submission="Hurray! A Brick House contact form message" name="contact"
+      method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
 
       <p class="hidden">
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
       </p>
       <div>
         <label for="name" class="f4 b db mb2 white">Name</label>
-        <input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100 mw6-l" type="text"
-          aria-describedby="name-desc">
+        <input id="name" name="name" class="input-reset ba b--black-20 pa2 mb2 db w-100 mw6-l" type="text"
+          aria-describedby="name">
       </div>
 
       <div>
         <label for="email" class="f4 b db mb2 white">Email</label>
-        <input id="email" class="input-reset ba b--black-20 pa2 mb2 db w-100 mw6-l" type="email"
-          aria-describedby="email-desc">
+        <input id="email" name="email" class="input-reset ba b--black-20 pa2 mb2 db w-100 mw6-l" type="email"
+          aria-describedby="email">
       </div>
 
       <div>
@@ -34,7 +34,7 @@
 
     <a href="#top" class="back-to-top fixed bottom-1 right-1 bg-white lh-solid z-999" data-aos="fade-left"
       data-aos-anchor="#fadein-backtotop">
-      <img src="{{ site.baseurl }}/images/arrow.svg" class="di w2 w3-l" alt="Scroll to top button">
+      <img src="{{ site.baseurl }}/images/arrow.svg" class="di w2" alt="Scroll to top button">
     </a>
   </div>
 </footer>
