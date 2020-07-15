@@ -248,7 +248,7 @@ border-radius: 0;
   padding-bottom: 2rem;
 }
 
-.services-content p, .work-content p {
+.services-content p, .work-content p, .services-content ul {
   @extend .lh-copy;
   @extend .sans-serif;
   @extend .f4;
