@@ -2,18 +2,18 @@
 author: april
 comments: false
 date: 2012-02-06 13:44:16+00:00
-excerpt: Find out more about the conservation of this gruesome series of paintings
-  belonging to Haslemere Educational Museum in Surrey.
+excerpt: Find out more about the conservation of this gruesome series of paintings belonging to Haslemere Educational Museum in Surrey.
 layout: work
 link: http://www.brickhouseconservation.co.uk/2012/02/06/sailor-hindhead/
 slug: sailor-hindhead
+image: sailorC1-6-4.jpg
 title: The Sailor at Hindhead
 wordpress_id: 39
 categories:
 - Our work
 ---
 
-Recently donated to Haslemere Educational Museum in Surrey, this series of paintings tell the story of the infamous murder of the sailor at Hindhead, September 1786. A fascinating narrative set out in five pictorial stages, painted by Pearson, the pub landlord in the 19th century.
+Donated to Haslemere Educational Museum in Surrey, this series of paintings tell the story of the infamous murder of the sailor at Hindhead, September 1786. A fascinating narrative set out in five pictorial stages, painted by Pearson, the pub landlord in the 19th century.
 
 Most of the paintings display hugely disfiguring wide alligator style cracks; a recognisable defect created from the uneven drying of the ground layer, paint extenders and bituminous resins. Naively painted by a pub landlord, the artist was perhaps unaware of the longevity of these cheap materials.
 
@@ -23,7 +23,7 @@ The paintings have been paste lined and tears repaired. Unfortunately, previousl
 
 Each painting depicts a different stage of the conservation process. Due to their intensive previous restoration, each one is currently being treated with sensitivity to retain as much of the artist’s original intentions as possible.
 
-![Sailor](http://www.brickhouseconservation.co.uk/wp-content/uploads/2012/02/sailorC1.jpg)
+![Sailor]({{ site.baseurl }}/images/sailorC1.jpg)
 
 Now treatment completed, the series have returned to [Haselmere Educational Museum, Surrey](http://www.haslemeremuseum.co.uk/).
 

@@ -18,3 +18,8 @@ background #fafafa
 - gold #FFC843
 - grey #6C6C6C
 - dark #393939
+
+## Examples 
+- https://www.offscreenmag.com
+- https://stripe.com/
+- https://jxnblk.com

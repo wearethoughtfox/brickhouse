@@ -3,7 +3,7 @@ author: april
 comments: false
 date: 2012-05-06 20:06:50+00:00
 image: a-cleaning-6-4.jpg
-layout: page
+layout: service
 link: http://www.brickhouseconservation.co.uk/painting-conservation-and-restoration/
 slug: painting-conservation-and-restoration
 title: Painting conservation and restoration
@@ -36,20 +36,18 @@ Also:
 * Public talks and studio tours
 
 ## Removal of surface dirt
-
-![dirt-under-stretcher](http://www.brickhouseconservation.co.uk/wp-content/uploads/2012/05/dirt-under-stretcherC1-300x400.jpg)
+![dirt-under-stretcher]({{ site.baseurl }}/images/dirt-under-stretcherC1-300x400.jpg)
 
 Time and environment can cause layers of dirt to build up on the surface of a painting. Removal of dirt such as smoke, fingerprints and nicotine may assist with revealing the colours, fine detail or brushwork the artist originally intended to be seen.
 
 Dirt found on the reverse of paintings may be detrimental to the painted layers on the front. It readily absorbs moisture and particles may become trapped between stretcher and canvas creating undesired surface undulations. The addition of a backing following treatment prevents the accumulation of dirt building up in the future.
 
 ## Remove discoloured varnish layers
-
 Traditionally, paintings were varnished with a natural resin varnish to saturate colours and protect the surface. However these are prone to darkening and turning yellow over time through the varying effects of light, heat and environment. This disguises the artists’ original colours and intentions. They may be carefully removed by a conservator. LINK CHIDDINGFOLD They are replaced with synthetic resins which have been formulated and tested by conservation scientists to minimise future degradation.
 
 ## Repair torn and damaged paintings
 
-![tear-repair](http://www.brickhouseconservation.co.uk/wp-content/uploads/2012/05/tear-repair-C-580x404.jpg)
+![tear-repair]({{ site.baseurl }}/images/tear-repair-C-580x404.jpg)
 
 The studio offers various techniques, materials and adhesives to sympathetically mend tears. This tear is being repaired by re-weaving linen threads and restoring the canvas tension as close to its pre-torn condition as possible. This intricate process is carried out under magnification using tweezers and a fine paintbrush to apply the adhesive.
 

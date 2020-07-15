@@ -7,12 +7,13 @@ layout: work
 link: http://www.brickhouseconservation.co.uk/2012/02/06/test-6/
 slug: palace-of-westminster-2012
 title: Palace of Westminster
+image: LushingtonBTATBIG1-6-4.jpg
 wordpress_id: 46
 categories:
 - Our work
 ---
 
-![Stephen Lushington portrait](http://www.brickhouseconservation.co.uk/wp-content/uploads/2012/02/LushingtonBTATBIG1-460x282.jpg)
+![Stephen Lushington portrait]({{ site.baseurl }}/images/LushingtonBTATBIG1-460x282.jpg)
 
 A recent acquisition to the collection at The Palace of Westminster, conservation was sought to enable this fine portrait to be displayed.
 

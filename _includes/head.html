@@ -3,27 +3,611 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <!-- prettier-ignore -->
-  <style type="text/css">
-    {
-      % capture critical %
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif
     }
 
-      {
-      % include critical.scss %
+    h1,
+    h2,
+    .h2,
+    h3 {
+      font-family: georgia, serif
     }
 
-      {
-      % endcapture %
+    p {
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0
     }
 
-      {
-        {
-        critical | scssify
+    .primary {
+      color: #FFC843
+    }
+
+    .secondary {
+      color: #6C6C6C
+    }
+
+    .customgrey {
+      color: #393939
+    }
+
+    .bg-primary {
+      background-color: #FFC843
+    }
+
+    .bg-secondary {
+      background-color: #6C6C6C
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    @media screen and (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
       }
     }
+
+    .hidden {
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px 1px 1px 1px);
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap
+    }
+
+    textarea {
+      resize: none;
+      overflow: auto
+    }
+
+    button,
+    .custom-btn {
+      line-height: 1;
+      box-shadow: 0 2px 0 #6C6C6C;
+      border: 2px solid transparent;
+      text-align: center;
+      vertical-align: top;
+      border-radius: 0;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 22px;
+      padding: 8px 10px 7px;
+      font-size: 1.25rem;
+      text-decoration: none
+    }
+
+    .custom-textarea {
+      font-size: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+      line-height: 1.25;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      min-height: 40px;
+      margin-bottom: 20px;
+      padding: 5px;
+      resize: vertical;
+      border: 2px solid #393939;
+      border-radius: 0;
+      -webkit-appearance: none
+    }
+
+    html {
+      line-height: 1.15;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%
+    }
+
+    article,
+    footer,
+    header,
+    nav,
+    section {
+      display: block
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: .67em 0
+    }
+
+    main {
+      display: block
+    }
+
+    a {
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects
+    }
+
+    img {
+      border-style: none
+    }
+
+    button,
+    input,
+    textarea {
+      margin: 0
+    }
+
+    button,
+    input {
+      overflow: visible
+    }
+
+    button {
+      text-transform: none
+    }
+
+    button,
+    [type="submit"] {
+      -webkit-appearance: button
+    }
+
+    button::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0
+    }
+
+    button:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText
+    }
+
+    textarea {
+      overflow: auto
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit
+    }
+
+    html,
+    body,
+    div,
+    article,
+    section,
+    main,
+    footer,
+    header,
+    form,
+    a,
+    h1,
+    h2,
+    h3,
+    p,
+    textarea,
+    input[type="email"],
+    input[type="text"],
+    .border-box {
+      box-sizing: border-box
+    }
+
+    .aspect-ratio {
+      height: 0;
+      position: relative
+    }
+
+    .aspect-ratio--6x4 {
+      padding-bottom: 66.6%
+    }
+
+    .aspect-ratio--object {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    .cover {
+      background-size: cover !important
+    }
+
+    .bg-center {
+      background-repeat: no-repeat;
+      background-position: center center
+    }
+
+    .ba {
+      border-style: solid;
+      border-width: 1px
+    }
+
+    .bt {
+      border-top-style: solid;
+      border-top-width: 1px
+    }
+
+    .b--dark-gray {
+      border-color: #333
+    }
+
+    .b--black-20 {
+      border-color: rgba(0, 0, 0, .2)
+    }
+
+    .bw1 {
+      border-width: .125rem
+    }
+
+    .right-1 {
+      right: 1rem
+    }
+
+    .bottom-1 {
+      bottom: 1rem
+    }
+
+    .cf:before,
+    .cf:after {
+      content: " ";
+      display: table
+    }
+
+    .cf:after {
+      clear: both
+    }
+
+    .cf {
+      *zoom: 1
+    }
+
+    .cb {
+      clear: both
+    }
+
+    .dn {
+      display: none
+    }
+
+    .di {
+      display: inline
+    }
+
+    .db {
+      display: block
+    }
+
+    .dib {
+      display: inline-block
+    }
+
+    @media screen and (min-width:30em) {
+      .db-ns {
+        display: block
+      }
+    }
+
+    .items-center {
+      align-items: center
+    }
+
+    @media screen and (min-width:30em) {
+      .flex-ns {
+        display: flex
+      }
+    }
+
+    .fl {
+      float: left;
+      _display: inline
+    }
+
+    .fr {
+      float: right;
+      _display: inline
+    }
+
+    @media screen and (min-width:30em) {
+      .fl-ns {
+        float: left;
+        _display: inline
+      }
+    }
+
+    .sans-serif {
+      font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif
+    }
+
+    .b {
+      font-weight: 700
+    }
+
+    .fw1 {
+      font-weight: 100
+    }
+
+    .fw2 {
+      font-weight: 200
+    }
+
+    .fw4 {
+      font-weight: 400
+    }
+
+    .input-reset {
+      -webkit-appearance: none;
+      -moz-appearance: none
+    }
+
+    .input-reset::-moz-focus-inner {
+      border: 0;
+      padding: 0
+    }
+
+    .h2 {
+      height: 2rem
+    }
+
+    .vh-75 {
+      height: 75vh
+    }
+
+    .tracked {
+      letter-spacing: .1em
+    }
+
+    .lh-solid {
+      line-height: 1
+    }
+
+    .lh-title {
+      line-height: 1.25
+    }
+
+    .lh-copy {
+      line-height: 1.5
+    }
+
+    .link {
+      text-decoration: none
+    }
+
+    .mw5 {
+      max-width: 16rem
+    }
+
+    .mw7 {
+      max-width: 48rem
+    }
+
+    .mw9 {
+      max-width: 96rem
+    }
+
+    .w2 {
+      width: 2rem
+    }
+
+    .w-100 {
+      width: 100%
+    }
+
+    @media screen and (min-width:30em) and (max-width:60em) {
+      .w-50-m {
+        width: 50%
+      }
+    }
+
+    .overflow-hidden {
+      overflow: hidden
+    }
+
+    .fixed {
+      position: fixed
+    }
+
+    .black-80 {
+      color: rgba(0, 0, 0, .8)
+    }
+
+    .mid-gray {
+      color: #555
+    }
+
+    .white {
+      color: #fff
+    }
+
+    .bg-black {
+      background-color: #000
+    }
+
+    .bg-white {
+      background-color: #fff
+    }
+
+    .pa2 {
+      padding: .5rem
+    }
+
+    .pa3 {
+      padding: 1rem
+    }
+
+    .pb2 {
+      padding-bottom: .5rem
+    }
+
+    .pb3 {
+      padding-bottom: 1rem
+    }
+
+    .pb4 {
+      padding-bottom: 2rem
+    }
+
+    .pb5 {
+      padding-bottom: 4rem
+    }
+
+    .pv5 {
+      padding-top: 4rem;
+      padding-bottom: 4rem
+    }
+
+    .pv6 {
+      padding-top: 8rem;
+      padding-bottom: 8rem
+    }
+
+    .ph3 {
+      padding-left: 1rem;
+      padding-right: 1rem
+    }
+
+    .ph4 {
+      padding-left: 2rem;
+      padding-right: 2rem
+    }
+
+    .ma0 {
+      margin: 0
+    }
+
+    .mr3 {
+      margin-right: 1rem
+    }
+
+    .mb0 {
+      margin-bottom: 0
+    }
+
+    .mb2 {
+      margin-bottom: .5rem
+    }
+
+    .mb3 {
+      margin-bottom: 1rem
+    }
+
+    .mb4 {
+      margin-bottom: 2rem
+    }
+
+    .mb5 {
+      margin-bottom: 4rem
+    }
+
+    .mt0 {
+      margin-top: 0
+    }
+
+    .mt4 {
+      margin-top: 2rem
+    }
+
+    @media screen and (min-width:30em) {
+      .pa3-ns {
+        padding: 1rem
+      }
+
+      .mb5-ns {
+        margin-bottom: 4rem
+      }
+
+      .mt0-ns {
+        margin-top: 0
+      }
+    }
+
+    @media screen and (min-width:30em) and (max-width:60em) {
+      .pa4-m {
+        padding: 2rem
+      }
+
+      .pr3-m {
+        padding-right: 1rem
+      }
+    }
+
+    .no-underline {
+      text-decoration: none
+    }
+
+    .tc {
+      text-align: center
+    }
+
+    @media screen and (min-width:30em) {
+      .tl-ns {
+        text-align: left
+      }
+    }
+
+    .ttu {
+      text-transform: uppercase
+    }
+
+    .f1 {
+      font-size: 3rem
+    }
+
+    .f2 {
+      font-size: 2.25rem
+    }
+
+    .f3 {
+      font-size: 1.5rem
+    }
+
+    .f4 {
+      font-size: 1.25rem
+    }
+
+    .f6 {
+      font-size: .875rem
+    }
+
+    .measure {
+      max-width: 30em
+    }
+
+    .center {
+      margin-right: auto;
+      margin-left: auto
+    }
+
+    .v-mid {
+      vertical-align: middle
+    }
+
+    .dim {
+      opacity: 1
+    }
+
+    .grow {
+      -moz-osx-font-smoothing: grayscale;
+      backface-visibility: hidden;
+      transform: translateZ(0)
+    }
+
+    .z-999 {
+      z-index: 999
     }
   </style>
+
 
   <!-- External CSS -->
   <script>

@@ -1,0 +1,22 @@
+---
+layout: default
+title: Work
+permalink: /work/
+---
+
+<section class="cf center ph3 ph4-ns pb5-l pt3">
+    {% for work in site.work reversed %}
+    <article class="fl w-100 w-33-l pa3-ns pb3 pb0-l">
+        <a href="{{ work.url }}">
+            <div class="aspect-ratio aspect-ratio--6x4">
+                <img style="background-image:url({{ site.baseurl }}/images/{{ work.image }});"
+                    class="db bg-center cover aspect-ratio--object dim" />
+            </div>
+        </a>
+        <a href="{{ work.url }}" class="pb2 link db dim primary">
+            <h3 class="sans-serif f4 mb0 fw4 ttu tracked">{{ work.title }}</h3>
+        </a>
+
+    </article>
+    {% endfor %}
+</section>

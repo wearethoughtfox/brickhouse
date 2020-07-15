@@ -150,6 +150,7 @@ body {
   h4,
   .h4 {
     font-family: $serif;
+    font-weight: 100;
   }
   
   p {
@@ -242,3 +243,15 @@ border-radius: 0;
 -webkit-appearance: none;
 }
 
+.services-content img, .work-content img {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.services-content p, .work-content p {
+  @extend .lh-copy;
+  @extend .sans-serif;
+  @extend .f4;
+  @extend .measure-wide;
+  @extend .pb3;
+}

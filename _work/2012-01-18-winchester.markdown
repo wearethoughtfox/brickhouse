@@ -12,12 +12,14 @@ categories:
 - Our work
 ---
 
-![](http://www.brickhouseconservation.co.uk/wp-content/uploads/2012/01/frameconsWinchC2.jpg)
+![Photo of moulding on Viscount Eversley painting]({{ site.baseurl }}/images/frameconsWinchC2.jpg)
 
 New casts of the moulding were sculpted to fit using traditional composition.
 
 Initial documentation of the condition was carried out in store.
 
-![](http://www.brickhouseconservation.co.uk/wp-content/uploads/2012/01/CwinchBT2.jpg)![](http://www.brickhouseconservation.co.uk/wp-content/uploads/2012/01/CwinchesterAT1.jpg)
+![Photo of Viscount Eversley painting]({{ site.baseurl }}/images/CwinchBT2.jpg)
+
+![Photo of Viscount Eversley painting]({{ site.baseurl }}/images/CwinchesterAT1.jpg)
 
 Conservation of both painting and frame has enabled Viscount Eversley to come out of store. He now hangs on public display within Winchester Guildhall.

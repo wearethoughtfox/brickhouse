@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<header>
+    <div class="cover bg-left bg-center-l vh-50 dt w-100">
+        <div class="bg-secondary dtc v-mid tc">
+            <h1 class="f2 f1-l white-90 mb0 lh-title ttu">{{ page.title }}</h1>
+        </div>
+    </div>
+</header>
+
+<div class="center pv4-l ph3 mt4 services-content">
+    {{ content }}
+</div>
+
+<div class="cf mw8 center ph3 pt4 bt b--light-gray mt4">
+    {% for service in site.services %}
+    {% if service.url != page.url %}
+
+
+    <article class="fl w-100 w-50-l pa3-ns pb4" data-aos="fade-up">
+        <a href="{{ service.url }}">
+            <span class="hidden">{{ service.title }}</span>
+            <div class="aspect-ratio aspect-ratio--6x4">
+                <img style="background-image:url({{ site.baseurl }}/images/{{ service.image }});"
+                    class="db bg-center cover aspect-ratio--object dim" />
+            </div>
+        </a>
+        <a href="{{ service.url }}" class="pb2 link db dim primary">
+            <h3 class="sans-serif f4 mb0 fw4 ttu tracked">{{ service.title }}</h3>
+        </a>
+        <p class="pb3 lh-copy">{{ service.excerpt }}</p>
+    </article>
+
+
+    {% endif %}
+    {% endfor %}
+</div>

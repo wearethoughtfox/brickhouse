@@ -3,7 +3,7 @@ navigation:
    url: /#about
  - title: Services
    url: /#service
- - title: Our work
-   url: /#work
+ - title: Work
+   url: /work
  - title: Contact
-   url: "#contact"
+   url: /#contact
