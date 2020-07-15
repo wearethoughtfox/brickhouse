@@ -10,7 +10,7 @@
     {% if page.url contains link.url %}
     {% assign current = 'current b--primary' %}
     {% endif %}
-    <a class="secondary no-underline f6 f5-l dib mr3 mr4-l ttu {{ current }}" href="{{ link.url }}"
+    <a class="pa3 secondary no-underline f6 f5-l dib ttu  {{ current }}" href="{{ link.url }}"
       title="{{ link.title }}">{{ link.title }}</a>
     {% endfor %}
   </nav>
