@@ -5,6 +5,7 @@ backend:
 
 media_folder: "images" # Folder where user uploaded files should go
 
+collections:
   - name: "work" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Work" # Used in the UI, ie.: "New Post"
     folder: "_work" # The path to the folder where the documents are stored
