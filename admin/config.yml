@@ -35,13 +35,13 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: 'pages'
-  label: 'Pages'
-  editor:
-    preview: false
-  files:
-    - label: 'Home layout'
-      name: 'home'
-      file: 'index.html'
-      fields:
-        - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
-        - { label: 'Body', name: 'body', widget: 'markdown' }
+    label: 'Pages'
+    editor:
+      preview: false
+    files:
+      - label: 'Home layout'
+        name: 'home'
+        file: 'index.html'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
