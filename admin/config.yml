@@ -17,6 +17,5 @@ collections:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Type", name: "type", widget: "list", required: false, allow_add: true}
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Slug", name: "slug", widget: "string"}
