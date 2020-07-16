@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  repo: wearethoughtfox/brickhouse # Path to your Github repository
+  branch: master # Branch to update (master by default)
+
+media_folder: "images" # Folder where user uploaded files should go
+
+collections:
+  - name: "work" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Work" # Used in the UI, ie.: "New Post"
+    folder: "_work" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Type", name: "type", widget: "list", required: false, allow_add: true}
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Slug", name: "slug", widget: "string"}
