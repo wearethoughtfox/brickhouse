@@ -23,3 +23,9 @@ background #fafafa
 - https://www.offscreenmag.com
 - https://stripe.com/
 - https://jxnblk.com
+
+## Admin
+- Add user in Netlify identity 
+- User clicks on email and creates password
+- If the link doesn't work, try cutting and pasting the link
+- You should now have a username and password which you can use at /admin/ 
