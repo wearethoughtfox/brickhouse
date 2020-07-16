@@ -8,7 +8,7 @@ slug: collections-management
 title: Collections Management
 wordpress_id: 349
 excerpt: "Tailor-made, high-quality collections care and management"
-image: qwork-in-situ-6-4.JPG
+image: /images/qwork-in-situ-6-4.JPG
 
 ---
 

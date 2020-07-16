@@ -8,7 +8,7 @@ slug: mounting-framing
 title: Mounting & Framing
 wordpress_id: 370
 excerpt: "Bespoke mounting and framing service to both conservation and museum standards"
-image: 2-frames-6-4.JPG
+image: /images/2-frames-6-4.JPG
 ---
 
 The Brick House offers a bespoke mounting and framing service to both conservation and museum standards for all types of artwork and memorabilia.

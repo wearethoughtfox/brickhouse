@@ -2,7 +2,7 @@
 author: april
 comments: false
 date: 2012-05-06 20:06:50+00:00
-image: a-cleaning-6-4.jpg
+image: /images/a-cleaning-6-4.jpg
 layout: service
 link: http://www.brickhouseconservation.co.uk/painting-conservation-and-restoration/
 slug: painting-conservation-and-restoration
