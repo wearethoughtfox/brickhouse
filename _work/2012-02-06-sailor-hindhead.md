@@ -6,7 +6,7 @@ excerpt: Find out more about the conservation of this gruesome series of paintin
 layout: work
 link: http://www.brickhouseconservation.co.uk/2012/02/06/sailor-hindhead/
 slug: sailor-hindhead
-image: sailorC1-6-4.jpg
+image: /images/sailorC1-6-4.jpg
 title: The Sailor at Hindhead
 wordpress_id: 39
 categories:

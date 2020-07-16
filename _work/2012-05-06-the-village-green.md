@@ -7,7 +7,7 @@ layout: work
 link: http://www.brickhouseconservation.co.uk/2012/05/06/the-village-green/
 slug: the-village-green
 title: The Village Green
-image: apaintconsolidation6-4.jpg
+image: /images/apaintconsolidation6-4.jpg
 wordpress_id: 116
 categories:
 - Our work

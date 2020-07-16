@@ -6,7 +6,7 @@ excerpt: Working on-site in The Lords.
 layout: work
 link: http://www.brickhouseconservation.co.uk/2012/02/06/dickinson-and-foster/
 slug: dickinson-and-foster
-image: aworkonsitepow6-4.jpg
+image: /images/aworkonsitepow6-4.jpg
 title: Palace of Westminster
 wordpress_id: 50
 categories:

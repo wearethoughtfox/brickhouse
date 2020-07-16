@@ -7,7 +7,7 @@ layout: work
 link: http://www.brickhouseconservation.co.uk/2012/02/06/russell-cotes-museum-and-art-gallery/
 slug: russell-cotes-museum-and-art-gallery
 title: Russell Cotes Museum & Art Gallery
-image: Cwoodmansterne2-6-4.jpg
+image: /images/Cwoodmansterne2-6-4.jpg
 wordpress_id: 48
 categories:
 - Our work

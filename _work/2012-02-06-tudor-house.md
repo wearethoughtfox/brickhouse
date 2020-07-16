@@ -4,7 +4,7 @@ comments: false
 date: 2012-02-06 12:42:38+00:00
 excerpt: Paintings conserved as part of Southampton's Grade I listed Tudor House Museum restoration project.
 layout: work
-image: Ctudorhouse-6-4.jpg
+image: /images/Ctudorhouse-6-4.jpg
 link: http://www.brickhouseconservation.co.uk/2012/02/06/tudor-house/
 slug: tudor-house
 title: Tudor House Museum Southampton

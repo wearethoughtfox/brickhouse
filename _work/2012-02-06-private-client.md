@@ -8,7 +8,7 @@ link: http://www.brickhouseconservation.co.uk/2012/02/06/private-client/
 slug: private-client
 title: Private Client 2011
 wordpress_id: 37
-image: AppelBTAT-460x301-6-4.jpg
+image: /images/AppelBTAT-460x301-6-4.jpg
 categories:
 - Our work
 ---

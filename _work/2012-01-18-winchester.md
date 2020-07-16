@@ -8,7 +8,7 @@ link: http://www.brickhouseconservation.co.uk/2012/01/18/winchester/
 slug: winchester
 title: Winchester City Council 2011
 wordpress_id: 13
-image: CwinchesterAT16-4.jpg
+image: /images/CwinchesterAT16-4.jpg
 categories:
 - Our work
 ---

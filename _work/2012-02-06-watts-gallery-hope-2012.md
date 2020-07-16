@@ -6,7 +6,7 @@ excerpt: Conservation of this splendid 12ft painting by G.F. Watts
 layout: work
 link: http://www.brickhouseconservation.co.uk/2012/02/06/watts-gallery-hope-2012/
 slug: watts-gallery-hope-2012
-image: Cstriplinearistedes-6-4.jpg
+image: /images/Cstriplinearistedes-6-4.jpg
 title: Watts Gallery Hope Restoration Project 2010
 wordpress_id: 35
 categories:
