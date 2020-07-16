@@ -17,9 +17,9 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "services" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Services" # Used in the UI, ie.: "New Post"
     folder: "_services/" # The path to the folder where the documents are stored
@@ -31,6 +31,6 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
