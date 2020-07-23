@@ -7,7 +7,7 @@ author: april
 slug: painting-conservation-and-restoration
 date: 2012-05-06 20:06:50+00:00
 comments: false
-title: FINE ART PAINTINGS
+title: Fine Art Painting Conservation
 link: http://www.brickhouseconservation.co.uk/painting-conservation-and-restoration/
 image: /images/a-cleaning-6-4.jpg
 ---
