@@ -1,13 +1,13 @@
 ---
-author: april
-comments: false
-date: 2016-09-29 12:32:52+00:00
-layout: service
-link: http://www.brickhouseconservation.co.uk/mounting-framing/
-slug: mounting-framing
-title: Mounting & Framing
+excerpt: Bespoke mounting and framing service to both conservation and museum standards
 wordpress_id: 370
-excerpt: "Bespoke mounting and framing service to both conservation and museum standards"
+layout: service
+author: april
+slug: mounting-framing
+date: 2016-09-29 12:32:52+00:00
+comments: false
+title: Frames
+link: http://www.brickhouseconservation.co.uk/mounting-framing/
 image: /images/2-frames-6-4.JPG
 ---
 
