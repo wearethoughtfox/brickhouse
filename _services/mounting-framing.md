@@ -11,9 +11,9 @@ title: Frames
 link: http://www.brickhouseconservation.co.uk/mounting-framing/
 image: /images/2-frames-6-4.JPG
 ---
-Frames need to work both visually appealing and surrounding Fine Art but also support and protect the artwork for now and future generations to continue to enjoy. 
+Frames need to complement visually and also support and protect your Fine Art now and for future generations to enjoy. 
 
-At The Brick House, we conserve both painting and their accompanying frame, implementing museum standard preventative conservation measures alongside traditional craft based restorations. 
+At The Brick House, we conserve both painting and their accompanying frame, implementing museum standard preventative conservation measures alongside traditional craft based restorations to provide a complete service. 
 
 ![Composite restoration](/images/frameconsWinchC2.jpg "Frame Conservation")
 
