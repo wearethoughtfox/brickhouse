@@ -7,7 +7,7 @@ author: april
 slug: consolidation of gilded frame
 date: 2016-09-29 12:32:52+00:00
 comments: false
-title: Frames
+title: Frame Conservation
 link: http://www.brickhouseconservation.co.uk/mounting-framing/
 image: /images/2-frames-6-4.JPG
 ---
