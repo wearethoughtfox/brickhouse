@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <section class="flex-ns vh-100-l items-center mb5">
     <div class="mw7 pr5-l">
         <img src="{{ site.baseurl }}/images/cpaper-square.jpg">
@@ -30,20 +29,20 @@ layout: default
 <section class="bg-secondary pv5 ph4 ph4-l pt3-l overflow-hidden" id="service">
     {% for service in site.services %}
 
-    <article class="fl w-100 w-33-l pa3-ns pb4" data-aos="fade-up">
-        <a href="{{ service.url }}">
-            <span class="hidden">{{ service.title }}</span>
-            <div class="aspect-ratio aspect-ratio--6x4">
-                <img style="background-image:url({{ site.baseurl }}{{ service.image }});"
-                    class="db bg-center cover aspect-ratio--object dim" />
-            </div>
-        </a>
-        <a href="{{ service.url }}" class="pb2 link db dim primary">
-            <h1 class="sans-serif f4 mb0 fw4 ttu tracked">{{ service.title }}</h1>
-        </a>
-        <p class="white pb3 lh-copy">{{ service.excerpt }}</p>
-    </article>
-    {% endfor %}
+<article class="fl w-100 w-33-l pa3-ns pb4" data-aos="fade-up">
+    <a href="{{ service.url }}">
+        <span class="hidden">{{ service.title }}</span>
+        <div class="aspect-ratio aspect-ratio--6x4">
+            <img style="background-image:url({{ site.baseurl }}{{ service.image }});"
+                class="db bg-center cover aspect-ratio--object dim" />
+        </div>
+    </a>
+    <a href="{{ service.url }}" class="pb2 link db dim primary">
+        <h1 class="sans-serif f4 mb0 fw4 ttu tracked">{{ service.title }}</h1>
+    </a>
+    <p class="white pb3 lh-copy">{{ service.excerpt }}</p>
+</article>
+{% endfor %}
 
 </section>
 
@@ -51,7 +50,7 @@ layout: default
     <div class="fr w-100 w-80-l">
         <h2 class="sans-serif f6 ttu tracked">Our work</h2>
         <h1 class="f2 f1-l lh-title mt0 mb4 mb5-ns fw1">
-            We've worked for <br class="dn db-ns"> a range of corporate, public and private clients
+            We work for <br class="dn db-ns"> a wide range of clients from charitable institutions to private individuals 
         </h1>
     </div>
     <div class="f6 lh-copy fl w-100 mb4">
@@ -72,12 +71,12 @@ layout: default
         </div>
         <div class="fl-ns w-50-m w-20-l pr3-m pr5-l">
             <p class="f4">
-                Another amazing client
+                Gainsborough's House and Museum
             </p>
         </div>
         <div class="fl-ns w-50-m w-20-l pr3-m pr5-l">
             <p class="f4">
-                Another amazing client
+                The National Trust
             </p>
         </div>
     </div>
