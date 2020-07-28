@@ -1,6 +1,6 @@
 ---
 excerpt: Conservation cleaning and restoration of frames including wood carving,
-  traditional gesso, compo and gilding.
+  traditional gesso, composite and gilding
 wordpress_id: 370
 layout: service
 author: april
