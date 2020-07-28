@@ -1,13 +1,13 @@
 ---
-excerpt: A broad variety of remedial, preventative and restorative conservation
-  treatments for paintings
+excerpt: Providing remedial, preventative and restorative conservation
+  treatments for all genres of Fine Art paintings
 wordpress_id: 108
 layout: service
 author: april
 slug: painting-conservation-and-restoration
 date: 2012-05-06 20:06:50+00:00
 comments: false
-title: Fine Art Painting Conservation
+title: Fine Art Conservation
 link: http://www.brickhouseconservation.co.uk/painting-conservation-and-restoration/
 image: /images/a-cleaning-6-4.jpg
 ---
@@ -17,7 +17,6 @@ The studio offers a broad variety of remedial, preventative and restorative c
 * Clean discoloured varnish layers
 * Consolidate flaking or water/fire damaged paint
 * Treat structural issues such as tears or insect damage
-* Conservation and restoration of frames
 * Reconstructive treatments filling and retouching of paint losses
 * Provide written and photographic documentation of treatments
 
@@ -25,7 +24,7 @@ Also:
 
 * Technical analysis and interpretation
 * Art historical research
-* Pigment and media idenification
+* Pigment and media identification
 * Cross sections
 * Fine Art Courier services
 * Condition reporting
@@ -58,8 +57,6 @@ The studio offers various techniques, materials and adhesives to sympathetical
 Lining imparts strength to the original canvas. Less invasive, and preventative treatments are also available such as strip and dry lining.
 
 ## Treat flaking and water damages
-
-
 
 ## Historic labels
 
