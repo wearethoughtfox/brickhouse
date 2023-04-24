@@ -11,14 +11,12 @@ title: BH10 Fine Art Transit
 link: http://www.brickhouseconservation.co.uk/painting-conservation-and-restoration/
 image: /images/img_0137-e1475150079314.jpg
 ---
-At BH10 Fine Art Transit, we’re committed to providing our clients with a stress-free experience when it comes to artwork transportation. We offer personalized services tailored to your specific needs and work closely with you to ensure that your artwork is transported with the utmost care and attention to detail
+BH10 Transit offers a reliable and professional courier service for your Fine Art. 
 
-![dirt-under-stretcher](/images/2023-03-09-at-1.43.16-pm.jpeg)
+Whether you need to transport artwork to an exhibition venue, another institution, or rehousing your own collection, we provide a personalised service, working alongside you to ensure each artwork is transported with the utmost care and attention to detail.
 
-Whether you need to transport artwork to an exhibition venue, another institution, or your own collection, we aim to provide reliable and secure transportation services for your priceless artworks. 
+![art-transit](/images/2023-03-09-at-1.43.16-pm.jpeg)
 
-With years of experience in the industry of fine art conservation, we understand the importance of handling your artwork with the utmost care and attention. Our team of expert handlers is trained to package, trans-port, and deliver your artwork safely and efficiently. 
+With decades of experience conserving works of art, installing exhibitions, and international courier work, our team of Art Technicians understand the importance of art handling, bespoke packaging, security, and environmental conditions, providing full ability to deliver your artworks safely and efficiently.  
 
- ”Ensuring your art arrives in perfect condition” 
-
- Contact us today to learn more about our services and how we can assist you with your artwork transportation needs.
+Contact us to book a collection and discuss your artwork transportation needs.
