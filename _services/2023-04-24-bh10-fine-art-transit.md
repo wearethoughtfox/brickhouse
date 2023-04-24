@@ -10,7 +10,7 @@ At BH10 Fine Art Transit, we're committed to providing our clients with a stress
 
 ![art-transit](/images/2023-03-09-at-1.43.16-pm.jpeg)
 
- Whether you need to transport artwork to an exhibition venue, another institution, or your own collection, we aim to provide reliable and secure transportation services for your priceless artworks. 
+Whether you need to transport artwork to an exhibition venue, another institution, or your own collection, we aim to provide reliable and secure transportation services for your priceless artworks. 
 
 With years of experience in the industry of fine art conservation, we understand the importance of handling your artwork with the utmost care and attention. Our team of expert handlers is trained to package, trans-port, and deliver your artwork safely and efficiently. 
 
