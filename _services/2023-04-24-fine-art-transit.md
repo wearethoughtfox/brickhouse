@@ -1,7 +1,7 @@
 ---
 layout: service
 excerpt: Providing safe and secure transportation for your most valuable
-  artworks. Trust us to handle your artwork with care and attention to detail.
+  artworks, handling them with the utmost care and attention to detail.
 wordpress_id: 108
 author: april
 slug: fine-art-transit
