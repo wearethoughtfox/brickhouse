@@ -36,7 +36,7 @@ Also:
 
 ## Removal of surface dirt
 
-![dirt-under-stretcher]({{ site.baseurl }}/images/dirt-under-stretcherC1-300x400.jpg)
+![dirt-under-stretcher](/images/girl-with-pearl.jpg)
 
 Time and environment can cause layers of dirt to build up on the surface of a painting. Removal of dirt such as smoke, fingerprints and nicotine may assist with revealing the colours, fine detail or brushwork the artist originally intended to be seen.
 
