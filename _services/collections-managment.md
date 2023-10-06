@@ -12,7 +12,7 @@ image: /images/qwork-in-situ-6-4.JPG
 ---
 The Brick House offers a tailor-made Collections care and management service for corporate, public and private clients.
 
-Working within the heritage sector for over 15 years has given us experience, knowledge and passion to provide clients with a museum-quality service, whether a single work of art or object or an entire collection. We are also well connected and valued by a network of leading museum-quality specialists and service providers, enabling us to deliver nothing but the best and to international standards.
+Working within the heritage sector for over 20 years has given us experience, knowledge and passion to provide clients with a museum-quality service, whether a single work of art or an entire collection. We are also well connected and valued by a network of leading museum-quality specialists and service providers, enabling us to deliver nothing but the best and to international standards.
 
 ![Conservator collection cataloguing](/images/IMG_5816-e1475101887708.jpg)
 
