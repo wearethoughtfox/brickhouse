@@ -92,6 +92,7 @@
   }
 
   .banner__lede {
+    font-weight: 300;
     margin-block-start: var(--space-s);
     font-size: var(--size-step-2);
     line-height: 1.4;

@@ -88,7 +88,7 @@ The refresh (Oct 2026) builds on the brand Brick House already had, not a new lo
 - **Type:** Georgia headings with the system sans, as before. No web fonts.
 - **Site frame:** a gold border round the browser window, like the logo's square (`body::after` in `global-styles.css`, width `--frame-width`).
 - **The brick:** `Logo.svelte` redraws the logo as SVG. `BrickFrame.svelte` puts its grey square in the top-right corner of a photo (home hero).
-- **Marks:** `Marks.svelte` draws thin gold lines running past an image's edges, like a frame-maker's measuring marks. A gold rule also runs down the left margin on wide screens (`main::before` in `+layout.svelte`).
+- **Marks:** `Marks.svelte` draws thin gold lines running past an image's edges, like a frame-maker's measuring marks.
 - **Staggered grids:** alternate service and work cards step down on wider screens.
 - **Small photos:** most project photos are 250–450px wide. Markdown images become "plates" (`parse.js` → `framePlates`) shown at natural size, and pairs sit side by side. Only the two large `jd_stour_*` photos (`hand-*.webp`, `on-site-*.webp`) are used big.
 - **Layout:** same structure as the old site: photo and name hero, grey "What we do" band holding the service cards, client list, black footer with the team and the contact form.

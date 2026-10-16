@@ -60,6 +60,11 @@ p {
   text-wrap: pretty;
 }
 
+/* Body text is light (300) at reading sizes, so bold steps down to 600 to match */
+:is(strong, b) {
+  font-weight: 600;
+}
+
 ul:not([class]) {
   padding-inline-start: 1.2em;
   list-style-type: square;

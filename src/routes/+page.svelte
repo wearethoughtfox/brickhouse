@@ -126,6 +126,7 @@
   }
 
   .hero__tagline {
+    font-weight: 300;
     margin-block-start: var(--space-s);
     font-size: var(--size-step-3);
     line-height: 1.3;
@@ -178,6 +179,7 @@
   }
 
   .about__lede {
+    font-weight: 300;
     margin-block-start: var(--space-m);
     font-size: var(--size-step-2);
     line-height: 1.45;
@@ -245,16 +247,11 @@
   .clients {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
-    gap: var(--space-m) var(--space-l);
+    gap: var(--space-s) var(--space-l);
     margin-block: var(--space-2xl);
     font-size: var(--size-step-1);
     line-height: 1.35;
     color: var(--color-ink);
-  }
-
-  .clients li {
-    padding-block-start: var(--space-xs);
-    border-block-start: 3px solid var(--color-gold);
   }
 
   .work__grid {
@@ -265,10 +262,6 @@
   @media (min-width: 48em) {
     .work__grid {
       grid-template-columns: repeat(3, 1fr);
-    }
-
-    .work__grid > li:nth-child(2) {
-      margin-block-start: var(--space-3xl);
     }
   }
 

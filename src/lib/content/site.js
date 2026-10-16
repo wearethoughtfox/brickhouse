@@ -1,4 +1,10 @@
-import editable from './site.json';
+import raw from './site.json';
+import { smartQuotes } from './parse.js';
+
+// Curly quotes in the CMS-edited copy, e.g. Gainsborough’s
+const editable = Object.fromEntries(
+  Object.entries(raw).map(([k, v]) => [k, Array.isArray(v) ? v.map(smartQuotes) : smartQuotes(v)])
+);
 
 /**
  * Site facts, formerly Jekyll's _config.yml, _data/nav.yaml and the footer include.

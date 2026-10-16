@@ -1,12 +1,28 @@
 import { marked } from 'marked';
+import { markedSmartypants } from 'marked-smartypants';
 import { parse } from 'yaml';
 
-marked.use({ gfm: true, breaks: false });
+marked.use({ gfm: true, breaks: false }, markedSmartypants());
+
+/**
+ * Curly quotes and apostrophes for plain strings (titles, summaries, site.json).
+ * Markdown bodies get the same treatment from marked-smartypants.
+ */
+export function smartQuotes(s) {
+  if (typeof s !== 'string') return s;
+  return s
+    .replace(/(\w)'(\w)/g, '$1’$2') // Gainsborough's, it's
+    .replace(/'(\d0s)/g, '’$1') // '80s
+    .replace(/(^|[\s(\[])'/g, '$1‘')
+    .replace(/'/g, '’')
+    .replace(/(^|[\s(\[])"/g, '$1“')
+    .replace(/"/g, '”');
+}
 
 /** Decode the few HTML entities that appear in front matter strings */
 export function decodeEntities(s) {
   if (typeof s !== 'string') return s;
-  return s
+  return smartQuotes(s)
     .replace(/&amp;/g, '&')
     .replace(/&#8217;/g, '’')
     .replace(/&#8216;/g, '‘')

@@ -8,10 +8,18 @@
 </div>
 
 <style>
+  /* Light (300) for reading sizes; near-black so the thinner strokes keep their contrast */
   .prose {
-    --flow-space: var(--space-s);
+    --flow-space: 1em;
     font-size: var(--size-step-1);
+    font-weight: 300;
     line-height: 1.65;
+    color: var(--color-ink);
+    hanging-punctuation: first allow-end;
+  }
+
+  .prose :global(:is(strong, b)) {
+    font-weight: 600;
   }
 
   .prose :global(:is(p, ul, ol)) {
@@ -24,7 +32,7 @@
   }
 
   .prose :global(h2 + *) {
-    --flow-space: var(--space-xs);
+    --flow-space: 0.5em;
   }
 
   .prose :global(ul) {

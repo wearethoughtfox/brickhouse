@@ -42,26 +42,4 @@
   main:focus {
     outline: none;
   }
-
-  /* One gold rule down the left margin, through every section, on wide screens */
-  @media (min-width: 64em) {
-    main {
-      position: relative;
-    }
-
-    main::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: max(
-        calc(var(--gutter) / 2),
-        calc((100% - var(--wrapper-max-width)) / 2 + var(--gutter) / 2)
-      );
-      z-index: 2;
-      width: 2px;
-      background: var(--color-gold);
-      pointer-events: none;
-    }
-  }
 </style>

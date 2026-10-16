@@ -43,6 +43,7 @@
   }
 
   .work-index__head p {
+    font-weight: 300;
     font-size: var(--size-step-2);
     line-height: 1.4;
     max-width: 34ch;
