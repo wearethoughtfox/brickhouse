@@ -1,0 +1,4 @@
+/*
+  Brick House uses system fonts only (Georgia + the system sans stack),
+  so there are no @font-face rules. Stacks live in design-tokens/fonts.json.
+*/

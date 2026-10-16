@@ -1,0 +1,124 @@
+/*
+  Global styles
+  Low-specificity styles that apply to the whole project: https://cube.fyi/css.html
+*/
+
+body {
+  background: var(--color-white);
+  color: var(--color-text);
+  font-size: var(--size-step-0);
+  font-family: var(--font-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-standard);
+  margin: 0;
+}
+
+/* Georgia headings, regular weight, set tight */
+:is(h1, h2, h3) {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-ink);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--size-step-6);
+}
+
+h2 {
+  font-size: var(--size-step-5);
+}
+
+h3 {
+  font-size: var(--size-step-3);
+}
+
+:is(h4, h5, h6) {
+  font-size: var(--size-step-00);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-ink);
+}
+
+/* Constrain body copy line length */
+p,
+li,
+blockquote,
+figcaption {
+  max-width: var(--measure);
+}
+
+.cluster p,
+.grid p,
+[data-no-measure] p {
+  max-width: unset;
+}
+
+p {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+ul:not([class]) {
+  padding-inline-start: 1.2em;
+  list-style-type: square;
+}
+
+:is(ol, ul):not([class]) li + * {
+  margin-block-start: var(--flow-space, var(--space-xs));
+}
+
+ul ::marker {
+  color: var(--color-logo-grey);
+}
+
+[role='list'][class],
+[role='tablist'][class] {
+  margin-block: 0;
+  padding: 0;
+}
+
+a:not([class]) {
+  color: var(--color-ink);
+  text-decoration-color: var(--color-gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+a:not([class]):hover {
+  color: var(--color-gold-deep);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold-deep);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/*
+  Site frame: a gold border round the whole browser window, like the logo's
+  thick square. Body padding keeps content (and full-bleed bands) inside it.
+*/
+body {
+  padding: var(--frame-width);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  border: var(--frame-width) solid var(--color-gold);
+  pointer-events: none;
+}

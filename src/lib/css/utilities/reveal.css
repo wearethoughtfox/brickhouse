@@ -1,0 +1,22 @@
+/*
+REVEAL
+Replaces AOS fade-up / slide-up / fade-left. Pair with the `reveal` action:
+  <div use:reveal on:reveal={() => shown = true} class="reveal" class:is-revealed={shown}>
+Only animates when JS has run (html.js, set in app.html) and the user has not asked for reduced motion.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .js .reveal[data-reveal='left'] {
+    transform: translate3d(24px, 0, 0);
+  }
+
+  .js .reveal.is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "description": "The conservation and restoration of fine art paintings and frames covering London, Hampshire, Wiltshire and Dorset.",
+  "tagline": "Specialist Fine Art Paintings and Frame Conservation & Restoration",
+  "email": "april@brickhouseconservation.co.uk",
+  "about_heading": "A studio dedicated to caring for your Fine Art.",
+  "about_text": "Our skilled team of MA qualified and ICON Accredited painting conservators work closely with clients to protect, restore and care for artworks in accordance with professional and ethical standards.",
+  "clients_heading": "We work for a wide range of clients from charitable institutions to private individuals",
+  "clients": [
+    "Palace of Westminster",
+    "Russell Cotes Museum & Art Gallery",
+    "Watts Gallery",
+    "Gainsborough's House and Museum",
+    "The National Trust"
+  ],
+  "conservators": [
+    "April Johnson ACR",
+    "Ambrose Scott-Moncrieff ACR",
+    "Lucy Ingham MA",
+    "Clare Mitchell MA (Collections Management)"
+  ],
+  "area_served": ["London", "Hampshire", "Wiltshire", "Dorset"]
+}

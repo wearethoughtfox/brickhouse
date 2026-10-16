@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Sveltia CMS for the Brick House site. Open /admin/ on the live site
+# (or /admin/index.html on `npm run dev`).
+#
+# Sign-in: GitHub, with Netlify as the OAuth provider (no base_url needed).
+# Netlify Identity / git-gateway from the old Netlify CMS are not supported.
+# See README.md → Content editing.
+
+backend:
+  name: github
+  repo: wearethoughtfox/brickhouse
+  branch: main # the SvelteKit site; the old Jekyll site stays on master
+
+# Paths are from the repository root (this project's folder)
+media_folder: /static/images
+public_folder: /images
+
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+
+output:
+  omit_empty_optional_fields: true
+
+collections:
+  - name: services
+    label: Services
+    label_singular: Service
+    folder: src/lib/content/services
+    create: true
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [title, date]
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title }
+      - name: date
+        label: Date
+        widget: datetime
+        hint: Services are listed oldest first, so this sets their order on the home page.
+      - name: excerpt
+        label: Summary
+        widget: text
+        hint: One or two sentences. Shown on the service card and in search results.
+      - name: image
+        label: Card image
+        widget: image
+        hint: Shown on the home page card, cropped to 3:2. At least 600px wide if you can.
+      - name: slug
+        label: URL slug
+        required: false
+        hint: The web address, /services/your-slug. Leave blank to use the file name. Don't change it once published.
+      - { name: link, label: Old WordPress address, widget: hidden, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: work
+    label: Work
+    label_singular: Project
+    folder: src/lib/content/work
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: "{{title}} ({{date | date('YYYY')}})"
+    sortable_fields: [date, title]
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title }
+      - name: date
+        label: Date
+        widget: datetime
+        hint: Projects are listed newest first.
+      - name: excerpt
+        label: Summary
+        widget: text
+        hint: One sentence. Shown on the work grid and in search results.
+      - name: image
+        label: Card image
+        widget: image
+        hint: Shown on the work grid, cropped to 3:2. At least 600px wide if you can.
+      - name: slug
+        label: URL slug
+        required: false
+        hint: The web address, /work/your-slug. Leave blank to use the title. Don't change it once published.
+      - { name: link, label: Old WordPress address, widget: hidden, required: false }
+      - name: body
+        label: Body
+        widget: markdown
+        hint: Images on their own line are shown at their real size with a border; two in a row sit side by side.
+
+  - name: settings
+    label: Site settings
+    format: json
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Home page and footer
+        file: src/lib/content/site.json
+        fields:
+          - name: description
+            label: Site description
+            widget: text
+            hint: Used by search engines and when the site is shared.
+          - { name: tagline, label: Tagline (under The Brick House) }
+          - { name: email, label: Contact email }
+          - { name: about_heading, label: What we do — heading }
+          - { name: about_text, label: What we do — text, widget: text }
+          - { name: clients_heading, label: Our work — heading, widget: text }
+          - name: clients
+            label: Clients
+            widget: list
+            hint: One name per line.
+          - name: conservators
+            label: Conservators (footer)
+            widget: list
+          - name: area_served
+            label: Areas covered
+            widget: list

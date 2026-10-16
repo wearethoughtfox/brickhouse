@@ -1,0 +1,7 @@
+# The old Jekyll site ran on Netlify (contact form uses Netlify Forms).
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"

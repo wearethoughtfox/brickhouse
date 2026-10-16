@@ -1,0 +1,29 @@
+/*
+BRAND UTILITIES
+.eyebrow — the Jekyll site's small "What we do" label (sans, uppercase, tracked)
+.mat     — thin border and white margin round an image. Most of the site's photos
+           are 250–450px wide, so .mat keeps them at their natural size instead
+           of stretching them.
+*/
+
+.eyebrow {
+  font-family: var(--font-base);
+  font-size: var(--size-step-00);
+  font-weight: var(--font-weight-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking);
+  line-height: var(--leading-fine);
+}
+
+.mat {
+  display: block;
+  background: var(--color-white);
+  padding: var(--mat);
+  border: 1px solid var(--color-rule);
+}
+
+.mat > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
