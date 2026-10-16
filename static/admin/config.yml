@@ -11,6 +11,9 @@ backend:
   name: github
   repo: wearethoughtfox/brickhouse
   branch: main # the SvelteKit site; the old Jekyll site stays on master
+  # Tells Netlify's OAuth service which site this is, so sign-in works on
+  # branch deploys (main--…) as well as on the custom domain
+  site_domain: jovial-carson-dfdd6b.netlify.app
 
 # Paths are from the repository root (this project's folder)
 media_folder: /static/images
