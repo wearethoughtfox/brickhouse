@@ -105,12 +105,9 @@ export function generateTokens() {
     lines.push(`  --size-${key}: ${value};`);
   }
 
-  // Leading: ratios (`value`), or fluid lengths (`min`/`max` px) that
-  // land on exact pixel values at both ends of their range
+  // Leading
   lines.push('\n  /* Leading */');
-  const ratios = leading.items.filter((item) => item.value !== undefined);
-  const fluid = leading.items.filter((item) => item.value === undefined);
-  for (const { name, value } of [...ratios, ...clampGenerator(fluid, viewports)]) {
+  for (const { name, value } of leading.items) {
     lines.push(`  --leading-${toKebab(name)}: ${value};`);
   }
 

@@ -71,7 +71,6 @@
   .work-item__head h1 {
     margin-block-start: var(--space-s);
     font-size: var(--size-step-5);
-    line-height: var(--leading-step-5);
   }
 
   .work-item__year {

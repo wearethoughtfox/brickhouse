@@ -8,12 +8,12 @@
 </div>
 
 <style>
-  /* Regular weight, near-black, on the 4px rhythm (28px → 32px) */
+  /* Regular weight, near-black. 1.6 is about 28px between lines on phones and 32px on wide screens */
   .prose {
     --flow-space: 1em;
     font-size: var(--size-step-1);
     font-weight: var(--font-weight-regular);
-    line-height: var(--leading-prose);
+    line-height: 1.6;
     color: var(--color-ink);
     hanging-punctuation: first allow-end;
   }
@@ -29,7 +29,6 @@
   .prose :global(h2) {
     --flow-space: var(--space-xl);
     font-size: var(--size-step-4);
-    line-height: var(--leading-step-4);
   }
 
   .prose :global(h2 + *) {
@@ -85,7 +84,6 @@
   .prose :global(.plate figcaption) {
     margin-block-start: var(--space-xs);
     font-size: var(--size-step-00);
-    line-height: var(--leading-standard);
     color: var(--color-logo-grey);
   }
 

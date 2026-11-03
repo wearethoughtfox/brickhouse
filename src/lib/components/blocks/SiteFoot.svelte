@@ -95,13 +95,11 @@
   .site-foot h2 {
     color: var(--color-white);
     font-size: var(--size-step-3);
-    line-height: var(--leading-step-3);
     margin-block-end: var(--space-s);
   }
 
   .site-foot__cta {
     font-size: var(--size-step-5) !important;
-    line-height: var(--leading-step-5) !important;
   }
 
   .site-foot__team ul {
@@ -166,7 +164,6 @@
     padding-block: var(--space-m);
     border-block-start: 1px solid #333;
     font-size: var(--size-step-00);
-    line-height: var(--leading-standard);
     color: #bdbdbd;
   }
 

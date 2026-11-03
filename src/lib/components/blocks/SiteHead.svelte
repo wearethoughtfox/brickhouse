@@ -35,7 +35,6 @@
   .brand__name {
     font-family: var(--font-display);
     font-size: var(--size-step-2);
-    line-height: var(--leading-standard);
     letter-spacing: -0.01em;
   }
 </style>

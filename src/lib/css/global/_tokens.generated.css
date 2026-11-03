@@ -44,12 +44,6 @@
   --leading-fine: 1.2;
   --leading-standard: 1.55;
   --leading-loose: 1.7;
-  --leading-body: clamp(1.5rem, 1.3081rem + 0.9302vw, 1.75rem);
-  --leading-prose: clamp(1.75rem, 1.5581rem + 0.9302vw, 2rem);
-  --leading-step-3: clamp(1.5rem, 1.3382rem + 0.7843vw, 2rem);
-  --leading-step-4: clamp(1.75rem, 1.4265rem + 1.5686vw, 2.75rem);
-  --leading-step-5: clamp(2.25rem, 1.8456rem + 1.9608vw, 3.5rem);
-  --leading-step-6: clamp(2.5rem, 1.7721rem + 3.5294vw, 4.75rem);
 
   /* Font weights */
   --font-weight-regular: 400;
