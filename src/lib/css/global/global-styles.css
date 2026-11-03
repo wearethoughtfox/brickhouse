@@ -68,7 +68,7 @@ p {
   text-wrap: pretty;
 }
 
-/* Body text is light (300) at reading sizes, so bold steps down to 600 to match */
+/* Bold is 600, one step above the regular (400) body and prose text */
 :is(strong, b) {
   font-weight: 600;
 }

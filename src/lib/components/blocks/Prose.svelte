@@ -8,12 +8,12 @@
 </div>
 
 <style>
-  /* Light (300) for reading sizes; near-black so the thinner strokes keep their contrast */
+  /* Regular weight, near-black, on the 4px rhythm (28px → 32px) */
   .prose {
     --flow-space: 1em;
     font-size: var(--size-step-1);
-    font-weight: 300;
-    line-height: 1.65;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--leading-prose);
     color: var(--color-ink);
     hanging-punctuation: first allow-end;
   }
@@ -85,6 +85,7 @@
   .prose :global(.plate figcaption) {
     margin-block-start: var(--space-xs);
     font-size: var(--size-step-00);
+    line-height: var(--leading-standard);
     color: var(--color-logo-grey);
   }
 
