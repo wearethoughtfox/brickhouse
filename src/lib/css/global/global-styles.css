@@ -9,34 +9,42 @@ body {
   font-size: var(--size-step-0);
   font-family: var(--font-base);
   font-weight: var(--font-weight-regular);
-  line-height: var(--leading-standard);
+  /* A length (24px → 28px), not a ratio, so children inherit it as it is.
+     Text that sets its own font-size sets its own line-height too. */
+  line-height: var(--leading-body);
   margin: 0;
 }
 
-/* Georgia headings, regular weight, set tight */
+/*
+  Georgia headings, regular weight, set tight. Each size has its own
+  line height on the 4px rhythm, so set both together when you change one.
+*/
 :is(h1, h2, h3) {
   font-family: var(--font-display);
   font-weight: var(--font-weight-regular);
   color: var(--color-ink);
-  line-height: 1.1;
   letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
 h1 {
   font-size: var(--size-step-6);
+  line-height: var(--leading-step-6);
 }
 
 h2 {
   font-size: var(--size-step-5);
+  line-height: var(--leading-step-5);
 }
 
 h3 {
   font-size: var(--size-step-3);
+  line-height: var(--leading-step-3);
 }
 
 :is(h4, h5, h6) {
   font-size: var(--size-step-00);
+  line-height: var(--leading-standard);
   font-weight: var(--font-weight-bold);
   color: var(--color-ink);
 }

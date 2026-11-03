@@ -40,6 +40,7 @@
     padding-block: var(--space-xs);
     color: var(--color-logo-grey);
     font-size: var(--size-step-00);
+    line-height: var(--leading-standard);
     text-transform: uppercase;
     letter-spacing: var(--tracking);
     text-decoration: none;

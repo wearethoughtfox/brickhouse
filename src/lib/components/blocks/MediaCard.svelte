@@ -82,7 +82,7 @@
 
   .card__excerpt {
     margin-block-start: var(--space-xs);
-    line-height: var(--leading-standard);
+    line-height: var(--leading-body);
   }
 
   .card[data-tone='grey'] .card__title {

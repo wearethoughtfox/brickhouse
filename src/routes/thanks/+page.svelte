@@ -26,5 +26,6 @@
 
   .message__lede {
     font-size: var(--size-step-2);
+    line-height: var(--leading-standard);
   }
 </style>

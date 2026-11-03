@@ -29,6 +29,7 @@
   .prose :global(h2) {
     --flow-space: var(--space-xl);
     font-size: var(--size-step-4);
+    line-height: var(--leading-step-4);
   }
 
   .prose :global(h2 + *) {

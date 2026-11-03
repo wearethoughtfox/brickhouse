@@ -1,11 +1,16 @@
 {
   "title": "Leading",
-  "description": "Ratio-based line-height values",
+  "description": "Ratios (`value`) for the utilities, and fluid line heights (`min`/`max` in pixels) on a 4px rhythm for body and headings. Each fluid line height uses the same range as its text size, so it lands on a multiple of 4px at both ends. Between the ends it is a straight line, so it is only near the rhythm there.",
   "items": [
     { "name": "Micro", "value": 0.85 },
     { "name": "Flat", "value": 1 },
     { "name": "Fine", "value": 1.2 },
     { "name": "Standard", "value": 1.55 },
-    { "name": "Loose", "value": 1.7 }
+    { "name": "Loose", "value": 1.7 },
+    { "name": "Body", "min": 24, "max": 28 },
+    { "name": "Step 3", "min": 24, "max": 32 },
+    { "name": "Step 4", "min": 28, "max": 44 },
+    { "name": "Step 5", "min": 36, "max": 56 },
+    { "name": "Step 6", "min": 40, "max": 76 }
   ]
 }
