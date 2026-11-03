@@ -8,12 +8,12 @@
 </div>
 
 <style>
-  /* Light (300) for reading sizes; near-black so the thinner strokes keep their contrast */
+  /* Regular weight, near-black. 1.6 is about 28px between lines on phones and 32px on wide screens */
   .prose {
     --flow-space: 1em;
     font-size: var(--size-step-1);
-    font-weight: 300;
-    line-height: 1.65;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.6;
     color: var(--color-ink);
     hanging-punctuation: first allow-end;
   }
