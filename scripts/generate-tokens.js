@@ -45,22 +45,28 @@ function toKebab(name) {
     .replace(/-+/g, '-');        // collapse any double dashes
 }
 
+/**
+ * min/max px → clamp(). The fluid range runs from viewports.min to
+ * viewports.max, or to the viewport a token names in `maxViewport`
+ * (e.g. "mid"), so body text can stop growing before the headings do.
+ */
 function clampGenerator(tokens, viewports) {
   const rootSize = 16;
   const minViewport = viewports.min / rootSize;
-  const maxViewport = viewports.max / rootSize;
 
-  return tokens.map(({ name, min, max }) => {
+  return tokens.map(({ name, min, max, maxViewport: until = 'max' }) => {
     if (min === max) {
       return { name, value: `${min / rootSize}rem` };
     }
+    const maxViewport = viewports[until] / rootSize;
     const minRem = min / rootSize;
     const maxRem = max / rootSize;
     const slope = (maxRem - minRem) / (maxViewport - minViewport);
     const intersection = -1 * minViewport * slope + minRem;
     return {
       name,
-      value: `clamp(${minRem}rem, ${intersection.toFixed(2)}rem + ${(slope * 100).toFixed(2)}vw, ${maxRem}rem)`
+      // 4 decimals, so the value meets min and max at the two viewports
+      value: `clamp(${minRem}rem, ${intersection.toFixed(4)}rem + ${(slope * 100).toFixed(4)}vw, ${maxRem}rem)`
     };
   });
 }
@@ -99,9 +105,12 @@ export function generateTokens() {
     lines.push(`  --size-${key}: ${value};`);
   }
 
-  // Leading
+  // Leading: ratios (`value`), or fluid lengths (`min`/`max` px) that
+  // land on exact pixel values at both ends of their range
   lines.push('\n  /* Leading */');
-  for (const { name, value } of leading.items) {
+  const ratios = leading.items.filter((item) => item.value !== undefined);
+  const fluid = leading.items.filter((item) => item.value === undefined);
+  for (const { name, value } of [...ratios, ...clampGenerator(fluid, viewports)]) {
     lines.push(`  --leading-${toKebab(name)}: ${value};`);
   }
 
