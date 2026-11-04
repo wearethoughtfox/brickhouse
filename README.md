@@ -93,6 +93,23 @@ The refresh (Oct 2026) builds on the brand Brick House already had, not a new lo
 - **Small photos:** most project photos are 250–450px wide. Markdown images become "plates" (`parse.js` → `framePlates`) shown at natural size, and pairs sit side by side. Only the two large `jd_stour_*` photos (`hand-*.webp`, `on-site-*.webp`) are used big.
 - **Layout:** same structure as the old site: photo and name hero, grey "What we do" band holding the service cards, client list, black footer with the team and the contact form.
 
+## Toolkit
+
+The shared parts come from `@thoughtfox/toolkit`, pinned by tag in `package.json` (`v0.2.2`). `src/app.css` shows which file comes from where. To upgrade, bump the tag, run `npm install`, build, and compare with the site snapshots.
+
+These stay in the site, because the toolkit's version would change the built CSS or markup:
+
+- `src/lib/css/compositions/grid.css`, `sidebar.css`, `reel.css`. No page uses these classes, so switching would change nothing you can see.
+- `src/lib/css/utilities/reveal.css` and `src/lib/actions/reveal.js`: the toolkit's reveal works differently (a `data-revealed` attribute, not the `.reveal` class).
+- `src/lib/components/blocks/SkipLink.svelte`: gold on ink, not the toolkit's colours.
+
+**Token generator.** `scripts/generate-tokens.js` stays here. The toolkit's generator gives the same spacing utilities, but it can't do two things this site needs:
+
+1. `maxViewport` on a token, so Step 0 and Step 1 in `text-sizes.json` stop growing at the `mid` viewport (760px). The toolkit's generator ignores it, so body and prose text would keep growing to 1350px.
+2. Clamp values to 4 decimals (the toolkit rounds to 2), so each size meets its min and max at the two viewports exactly.
+
+When a toolkit release has both (4 decimals as an option, so other sites don't change), this site can switch to it.
+
 ## Changes from the Jekyll site
 
 - Replaced Netlify CMS with Sveltia CMS (same `/admin/` address). Removed: Netlify Identity, reCAPTCHA on the form (the honeypot is still there), AOS. The starter's `reveal` action now does the fade-up.
