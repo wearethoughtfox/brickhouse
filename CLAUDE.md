@@ -34,7 +34,9 @@ Edit JSON files in `src/lib/design-tokens/`, then regenerate:
 npm run tokens
 ```
 
-This writes `_tokens.generated.css` with all `--color-*`, `--space-*`, `--size-step-*`, `--leading-*`, `--font-*` custom properties, and `_spacing.generated.css` with the spacing utilities.
+This writes `_tokens.generated.css` with all `--color-*`, `--space-*`, `--size-step-*`, `--leading-*`, `--font-*` custom properties, and `_spacing.generated.css` with the spacing utilities. The generator is the toolkit's; in dev its Vite plugin watches the JSON and regenerates on save, so `npm run tokens` is only needed outside a dev server.
+
+**Both callers must read `tokens.config.js`.** It holds `clampPrecision: 4`, and the toolkit defaults to 2 — at 2, twenty-two fluid values change and each falls short of its stated min and max. `vite.config.js` passes it to `tokensPlugin()`, and `npm run tokens` goes through `scripts/tokens.js`, which passes it too. Never run `node node_modules/@thoughtfox/toolkit/tokens/generate-tokens.js` directly: it takes no command-line options and would run at the default.
 
 Token files:
 - `colors.json` — palette
@@ -91,7 +93,7 @@ The components set CSS custom properties via `style:--prop={value}`. The CSS cla
 
 - `SkipLink` is the first element in `+layout.svelte`
 - Every `<nav>` has a unique `aria-label`
-- Focus moves to `<h1>` on route change (via `afterNavigate` in `+layout.svelte`)
+- Focus moves to the `<h1>` on route change, via `afterNavigate(focusHeading())` from `@thoughtfox/toolkit/layout/focus-heading.js`. **Call `afterNavigate` at the top level of the script, never inside `onMount`** — a lifecycle function registered from inside `onMount` is dropped without an error, which is how this site went a long time with it silently doing nothing. `focusHeading()` leaves the first load and in-page anchors (`/#about`, `/#contact`) to the browser, and never scrolls
 - `<ul>` and `<ol>` with list styles removed use `role="list"`
 - Interactive elements are always `<button>` (action) or `<a>` (navigation) — never divs
 - Color contrast: minimum 4.5:1 for body text
