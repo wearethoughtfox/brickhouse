@@ -34,6 +34,8 @@ Edit JSON files in `src/lib/design-tokens/`, then regenerate:
 npm run tokens
 ```
 
+This goes through `scripts/tokens.js`, which passes `tokens.config.js` (`clampPrecision: 4`). The toolkit's generator defaults to 2 decimals, so never call it directly — see README.md.
+
 This writes `_tokens.generated.css` with all `--color-*`, `--space-*`, `--size-step-*`, `--leading-*`, `--font-*` custom properties, and `_spacing.generated.css` with the spacing utilities.
 
 Token files:
@@ -91,7 +93,7 @@ The components set CSS custom properties via `style:--prop={value}`. The CSS cla
 
 - `SkipLink` is the first element in `+layout.svelte`
 - Every `<nav>` has a unique `aria-label`
-- Focus moves to `<h1>` on route change (via `afterNavigate` in `+layout.svelte`)
+- Focus moves to the `<h1>` on route change, via `afterNavigate(focusHeading())` from `@thoughtfox/toolkit/layout/focus-heading.js`. **Call `afterNavigate` at the top level, never inside `onMount`** — registered from inside `onMount` it is dropped without an error
 - `<ul>` and `<ol>` with list styles removed use `role="list"`
 - Interactive elements are always `<button>` (action) or `<a>` (navigation) — never divs
 - Color contrast: minimum 4.5:1 for body text

@@ -1,22 +1,16 @@
 <script>
   import '../app.css';
   import { afterNavigate } from '$app/navigation';
-  import { onMount } from 'svelte';
+  import { focusHeading } from '@thoughtfox/toolkit/layout/focus-heading.js';
   import SkipLink from '$lib/components/blocks/SkipLink.svelte';
   import SiteHead from '$lib/components/blocks/SiteHead.svelte';
   import SiteFoot from '$lib/components/blocks/SiteFoot.svelte';
 
-  onMount(() => {
-    afterNavigate(({ from, to }) => {
-      // Leave the first load and in-page anchors (/#about, /#contact) to the browser
-      if (!from || to?.url.hash) return;
-      const heading = document.querySelector('main h1');
-      if (heading) {
-        heading.setAttribute('tabindex', '-1');
-        heading.focus({ preventScroll: false });
-      }
-    });
-  });
+  // Top level, never inside onMount: a lifecycle function registered from
+  // inside onMount is dropped silently, which is why this never ran.
+  // focusHeading() keeps the same intent — first load and in-page anchors
+  // (/#about, /#contact) are left to the browser — and does not scroll.
+  afterNavigate(focusHeading());
 </script>
 
 <SkipLink />

@@ -95,7 +95,7 @@ The refresh (Oct 2026) builds on the brand Brick House already had, not a new lo
 
 ## Toolkit
 
-The shared parts come from `@thoughtfox/toolkit`, pinned by tag in `package.json` (`v0.2.2`). `src/app.css` shows which file comes from where. To upgrade, bump the tag, run `npm install`, build, and compare with the site snapshots.
+The shared parts come from `@thoughtfox/toolkit`, pinned by tag in `package.json` (`v0.3.0`). `src/app.css` shows which file comes from where. To upgrade, bump the tag, run `npm install`, build, and compare with the site snapshots.
 
 These stay in the site, because the toolkit's version would change the built CSS or markup:
 
@@ -103,12 +103,16 @@ These stay in the site, because the toolkit's version would change the built CSS
 - `src/lib/css/utilities/reveal.css` and `src/lib/actions/reveal.js`: the toolkit's reveal works differently (a `data-revealed` attribute, not the `.reveal` class).
 - `src/lib/components/blocks/SkipLink.svelte`: gold on ink, not the toolkit's colours.
 
-**Token generator.** `scripts/generate-tokens.js` stays here. The toolkit's generator gives the same spacing utilities, but it can't do two things this site needs:
+**Token generator.** Now the toolkit's, as of v0.3.0, which has both things this site needs: `maxViewport` on a token (so Step 0 and Step 1 in `text-sizes.json` stop growing at the `mid` viewport, 760px, while headings carry on to 1350px) and clamp precision as an option.
 
-1. `maxViewport` on a token, so Step 0 and Step 1 in `text-sizes.json` stop growing at the `mid` viewport (760px). The toolkit's generator ignores it, so body and prose text would keep growing to 1350px.
-2. Clamp values to 4 decimals (the toolkit rounds to 2), so each size meets its min and max at the two viewports exactly.
+The precision is the catch. **The toolkit defaults to 2 decimals and this site needs 4**; at 2, twenty-two of the `--space-*` and `--size-step-*` values come out different, and each one falls slightly short of its stated min and max at the two viewports. So the option lives in one place, `tokens.config.js`, and both callers read it:
 
-When a toolkit release has both (4 decimals as an option, so other sites don't change), this site can switch to it.
+- `vite.config.js` — `tokensPlugin(tokenOptions)`, which also watches the token JSON in dev
+- `scripts/tokens.js` — what `npm run tokens` runs
+
+Don't call the toolkit's generator directly (`node node_modules/@thoughtfox/toolkit/tokens/generate-tokens.js`). It takes no command-line options, so it would run at the default 2 decimals and quietly rewrite those twenty-two values.
+
+**Search and sharing tags** come from `@thoughtfox/toolkit/seo`. `<Seo>` passes this site's own policy — no trailing slash on canonicals, `"Title | Site"` for the document title and the bare title for `og:title` — and `sitemap.xml`, `robots.txt` and `llms.txt` are built by the toolkit's functions. The sitemap sets `lastmod` only where a page has a real date; it used to stamp the build date on everything, which told crawlers the whole site changed on every deploy.
 
 ## Changes from the Jekyll site
 
