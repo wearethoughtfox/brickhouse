@@ -112,7 +112,13 @@ The precision is the catch. **The toolkit defaults to 2 decimals and this site n
 
 Don't call the toolkit's generator directly (`node node_modules/@thoughtfox/toolkit/tokens/generate-tokens.js`). It takes no command-line options, so it would run at the default 2 decimals and quietly rewrite those twenty-two values.
 
-**Search and sharing tags** come from `@thoughtfox/toolkit/seo`. `<Seo>` passes this site's own policy — no trailing slash on canonicals, `"Title | Site"` for the document title and the bare title for `og:title` — and `sitemap.xml`, `robots.txt` and `llms.txt` are built by the toolkit's functions. The sitemap sets `lastmod` only where a page has a real date; it used to stamp the build date on everything, which told crawlers the whole site changed on every deploy.
+**Search and sharing tags** come from `@thoughtfox/toolkit/seo`. `<Seo>` passes this site's own policy — no trailing slash on canonicals, `"Title | Site"` for the document title, the bare title for `og:title`, and `noindex` on everything except a Netlify production build — and `sitemap.xml`, `robots.txt` and `llms.txt` are built by the toolkit's functions. The sitemap sets `lastmod` only where a page has a real date; it used to stamp the build date on everything, which told crawlers the whole site changed on every deploy.
+
+**Indexability.** Only the production build may be indexed. `vite.config.js` reads Netlify's `CONTEXT` and defines `__INDEXABLE__`; `<Seo>` passes it to the toolkit, so branch deploys, deploy previews and local builds all carry `noindex, nofollow`. `INDEXABLE=true` forces it on.
+
+This matters because `main` has a branch deploy at `main--jovial-carson-dfdd6b.netlify.app` while the live site is still the Jekyll one on `master`. Without the gate, that deploy is a publicly crawlable copy of a live client site.
+
+`robots.txt` still says `Allow: /` on every build, on purpose: a crawler has to fetch a page to see its `noindex`, so disallowing it there would have the opposite effect.
 
 ## Changes from the Jekyll site
 

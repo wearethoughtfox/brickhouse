@@ -89,6 +89,10 @@ The components set CSS custom properties via `style:--prop={value}`. The CSS cla
 | `Region` | `.region` | `space` | `--region-space` |
 | `Repel` | `.repel` | — | `--repel-vertical-alignment` |
 
+## Indexability
+
+Only Netlify production builds may be indexed. `vite.config.js` defines `__INDEXABLE__` from `CONTEXT`; `<Seo>` passes it through to the toolkit's `buildHead()`. Branch deploys and previews get `noindex, nofollow`. `robots.txt` stays `Allow: /` deliberately — see README.md.
+
 ## Accessibility conventions
 
 - `SkipLink` is the first element in `+layout.svelte`
